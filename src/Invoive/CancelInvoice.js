@@ -30,7 +30,7 @@ export default class CancelInvoice extends Component {
           <DataGrid
             rows={this.state.Data}
             columns={this.props.columns}
-            pageSize={5}
+            pageSize={10}
           />
         </div>
       );

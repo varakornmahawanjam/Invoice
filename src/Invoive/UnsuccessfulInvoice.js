@@ -14,12 +14,11 @@ export default class UnsuccessfulInvoice extends Component {
       await Object.values(this.props.Data).map(async (data, i) => {
         if (data.status === "ไม่สำเร็จ") {
           await tempdata.push(data);
-          console.log(data);
         }
       });
     }
     this.setState({ Data: tempdata, isLoading: false });
-    console.log("tempdata :", tempdata);
+    // console.log("tempdata :", tempdata);
   }
 
   render() {
@@ -31,7 +30,7 @@ export default class UnsuccessfulInvoice extends Component {
           <DataGrid
             rows={this.state.Data}
             columns={this.props.columns}
-            pageSize={5}
+            pageSize={10}
           />
         </div>
       );

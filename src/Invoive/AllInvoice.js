@@ -8,7 +8,7 @@ export default class AllInvoice extends Component {
         <DataGrid
           rows={this.props.Data}
           columns={this.props.columns}
-          pageSize={5}
+          pageSize={10}
         />
       </div>
     );
